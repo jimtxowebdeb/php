@@ -6,8 +6,13 @@
 <tr>
 
 <?php 
+if (is_numeric($_POST['num'])&& $_POST['num']>0 && strpos($_POST["num"], '.') == FALSE && strpos($_POST["num"], ',') == FALSE) {
+	$num=$_POST['num'];
+} else {
+	$num=1;
+}
 
-for($i=1;$i<=$_POST['num'];$i++){
+for($i=1;$i<=$num;$i++){
 ?>
 	
 		<td>
